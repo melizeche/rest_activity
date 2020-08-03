@@ -5,7 +5,6 @@ A simple activity list REST API
 
 - Python 3.6+
 - Django 2.2+
-- PostgreSQL 11+
 
 ## Install
 
@@ -14,30 +13,19 @@ git clone git@github.com:melizeche/rest_activity.git
 cd rest_activity
 python3 -m venv env
 source env/bin/activate
-pip install --upgrade pip
 pip install -r requirements.txt
-cp conf/.env.example conf/.env # you should edit this file with your configuration
 ./manage.py migrate
 ./manage.py runserver
 ```
 
-## Install using docker-compose
+## API Docs
+ Check  openapi-schema.yml or go to `/docs/` 
+ ![docs1](images/docs1.png)
+ ![docs2](images/docs2.png)
 
-```
-git clone git@github.com:melizeche/rest_activity.git && cd rest_activity
-cp conf/.env.example conf/.env # you should edit this file with your configuration
-docker-compose up -d --build
-docker-compose exec app ./manage.py migrate
-```
+## Backlog
 
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Add your name and git account to the Contributors section in this `README.md` :D
-6. Submit a pull request to `dev` branch
+[Product Backlog](backlog.md)
 
 ## Author
 
@@ -46,4 +34,4 @@ docker-compose exec app ./manage.py migrate
 
 ## License
 
-This project is licensed under the terms of the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
+This project is licensed under the terms of the MIT Public License - see the [LICENSE](LICENSE) file for details

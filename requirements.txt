@@ -2,3 +2,5 @@ Django~=2.2
 djangorestframework==3.11.0
 django-cors-headers==3.4.0
 Pillow==7.2.0
+pyyaml
+uritemplate

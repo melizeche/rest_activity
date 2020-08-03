@@ -1,0 +1,263 @@
+openapi: 3.0.2
+info:
+  title: 'rest_activity'
+  version: '0.1.0'
+paths:
+  /api/v1/actividades/:
+    get:
+      operationId: listActividades
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    ID:
+                      type: string
+                      readOnly: true
+                    tipo:
+                      type: integer
+                    origen:
+                      type: integer
+                    cuerpo:
+                      type: string
+                    imagenes:
+                      type: array
+                      items:
+                        properties:
+                          image:
+                            type: string
+                            format: binary
+                        required:
+                        - image
+                      readOnly: true
+                  required:
+                  - tipo
+                  - origen
+                  - cuerpo
+          description: ''
+    post:
+      operationId: createActividad
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: &id001
+              properties:
+                tipo:
+                  type: integer
+                origen:
+                  type: integer
+                cuerpo:
+                  type: string
+              required:
+              - tipo
+              - origen
+              - cuerpo
+          application/x-www-form-urlencoded:
+            schema: *id001
+          multipart/form-data:
+            schema: *id001
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ID:
+                    type: string
+                    readOnly: true
+                  tipo:
+                    type: integer
+                  origen:
+                    type: integer
+                  cuerpo:
+                    type: string
+                  imagenes:
+                    type: array
+                    items:
+                      properties:
+                        image:
+                          type: string
+                          format: binary
+                      required:
+                      - image
+                    readOnly: true
+                required:
+                - tipo
+                - origen
+                - cuerpo
+          description: ''
+  /api/v1/actividades/{ID}/:
+    get:
+      operationId: retrieveActividad
+      description: ''
+      parameters:
+      - name: ID
+        in: path
+        required: true
+        description: A unique value identifying this actividad.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ID:
+                    type: string
+                    readOnly: true
+                  tipo:
+                    type: integer
+                  origen:
+                    type: integer
+                  cuerpo:
+                    type: string
+                  imagenes:
+                    type: array
+                    items:
+                      properties:
+                        image:
+                          type: string
+                          format: binary
+                      required:
+                      - image
+                    readOnly: true
+                required:
+                - tipo
+                - origen
+                - cuerpo
+          description: ''
+    put:
+      operationId: updateActividad
+      description: ''
+      parameters:
+      - name: ID
+        in: path
+        required: true
+        description: A unique value identifying this actividad.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: &id002
+              properties:
+                tipo:
+                  type: integer
+                origen:
+                  type: integer
+                cuerpo:
+                  type: string
+              required:
+              - tipo
+              - origen
+              - cuerpo
+          application/x-www-form-urlencoded:
+            schema: *id002
+          multipart/form-data:
+            schema: *id002
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ID:
+                    type: string
+                    readOnly: true
+                  tipo:
+                    type: integer
+                  origen:
+                    type: integer
+                  cuerpo:
+                    type: string
+                  imagenes:
+                    type: array
+                    items:
+                      properties:
+                        image:
+                          type: string
+                          format: binary
+                      required:
+                      - image
+                    readOnly: true
+                required:
+                - tipo
+                - origen
+                - cuerpo
+          description: ''
+    patch:
+      operationId: partial_updateActividad
+      description: ''
+      parameters:
+      - name: ID
+        in: path
+        required: true
+        description: A unique value identifying this actividad.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: &id003
+              properties:
+                tipo:
+                  type: integer
+                origen:
+                  type: integer
+                cuerpo:
+                  type: string
+          application/x-www-form-urlencoded:
+            schema: *id003
+          multipart/form-data:
+            schema: *id003
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ID:
+                    type: string
+                    readOnly: true
+                  tipo:
+                    type: integer
+                  origen:
+                    type: integer
+                  cuerpo:
+                    type: string
+                  imagenes:
+                    type: array
+                    items:
+                      properties:
+                        image:
+                          type: string
+                          format: binary
+                      required:
+                      - image
+                    readOnly: true
+                required:
+                - tipo
+                - origen
+                - cuerpo
+          description: ''
+    delete:
+      operationId: destroyActividad
+      description: ''
+      parameters:
+      - name: ID
+        in: path
+        required: true
+        description: A unique value identifying this actividad.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
