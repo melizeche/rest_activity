@@ -20,6 +20,7 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 
 from api import views as api_views
+from core import views as core_views
 from rest_framework.routers import SimpleRouter
 
 router = SimpleRouter()
@@ -33,6 +34,7 @@ urlpatterns = [
         template_name='swagger-ui.html',
         extra_context={'schema_url':'openapi-schema'}
     ), name='swagger-ui'),
+    path('', core_views.home)
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
