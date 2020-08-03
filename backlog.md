@@ -1,11 +1,13 @@
 # Product Backlog
 |status| task desc | (time estimation) | actual time |
-## Tareas
+
+## Tasks
 
 * [x] Environment setup (0.5h) | 0.5h
 * [x] Data modeling (1h) | 1.5h
 * [x] Create serializers(0.5h) | 1h
 * [x] frontend(1h) | 0.5h 
+* [ ] Docker support(1h)
 
 ## API Endpoints
 * [x] Create activity (0.5h) | 1h
@@ -20,6 +22,6 @@
 * [ ] List activities (0.25h)
   
 ## Docs & Testing
-* [ ] Models (0.5h)
-* [ ] API (1h)
+* [ ] Models tests (0.5h)
+* [ ] API tests (1h)
 * [x] API Docs(1h) | 0.5h
