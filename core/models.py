@@ -11,6 +11,9 @@ def create_alpha_id():
 class Origen(models.Model):
     texto = models.TextField()
 
+    class Meta:
+        verbose_name_plural = 'Origenes'
+
     def __str__(self):
         return self.texto
 
@@ -28,6 +31,9 @@ class Actividad(models.Model):
     origen = models.ForeignKey(Origen, on_delete=models.CASCADE)
     cuerpo = models.TextField()
 
+    class Meta:
+        verbose_name_plural = 'Actividades'
+
     def __str__(self):
         return f'<Actividad {self.ID}: {self.cuerpo}>'
 
@@ -35,6 +41,9 @@ class Actividad(models.Model):
 class Imagen(models.Model):
     actividad = models.ForeignKey(Actividad, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images')
+
+    class Meta:
+        verbose_name_plural = 'Imágenes'
 
     def __str__(self):
         return f'<Imagen {self.image}: {self.actividad}>'
