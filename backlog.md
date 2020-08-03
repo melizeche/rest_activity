@@ -4,6 +4,8 @@
 
 * [ ] Environment setup (0.5hs) 
 * [ ] Data modeling (1hs)
+* [ ] Create serializers(0.5hs)
+* [ ] frontend(1h)
 
 ## API Endpoints
 * [ ] Create activity 
