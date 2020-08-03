@@ -1,5 +1,5 @@
 """
-WSGI config for rest_contact project.
+WSGI config for rest_activity project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

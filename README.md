@@ -1,5 +1,5 @@
-# rest_contact
-A simple contact list REST API
+# rest_activity
+A simple activity list REST API
 
 ## Requirements
 
@@ -10,8 +10,8 @@ A simple contact list REST API
 ## Install
 
 ```
-git clone git@github.com:melizeche/rest_contact.git
-cd rest_contact
+git clone git@github.com:melizeche/rest_activity.git
+cd rest_activity
 python3 -m venv env
 source env/bin/activate
 pip install --upgrade pip
@@ -24,7 +24,7 @@ cp conf/.env.example conf/.env # you should edit this file with your configurati
 ## Install using docker-compose
 
 ```
-git clone git@github.com:melizeche/rest_contact.git && cd rest_contact
+git clone git@github.com:melizeche/rest_activity.git && cd rest_activity
 cp conf/.env.example conf/.env # you should edit this file with your configuration
 docker-compose up -d --build
 docker-compose exec app ./manage.py migrate
